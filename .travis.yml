@@ -1,3 +1,4 @@
 language: swift
-script:
-  - xcodebuild test -project TestMania.xcodeproj -scheme TestMania -destination 'platform=iOS,name=iPhone 6'
+
+xcode_project: TestMania.xcodeproj
+xcode_scheme: TestMania
