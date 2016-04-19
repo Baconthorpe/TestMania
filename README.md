@@ -1,3 +1,3 @@
 # TestMania
 
-https://travis-ci.org/Baconthorpe/TestMania.svg?branch=master
+[<img src="https://travis-ci.org/Baconthorpe/TestMania.svg?branch=master">]
