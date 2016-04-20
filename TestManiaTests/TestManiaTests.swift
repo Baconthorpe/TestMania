@@ -32,4 +32,12 @@ class TestManiaTests: XCTestCase {
         vc.badBehavior()
         XCTAssert(!vc.everythingIsAwesome)
     }
+    
+    func testGoodThenBadBehavior() {
+        let vc = ViewController()
+        vc.goodBehavior()
+        XCTAssert(vc.everythingIsAwesome)
+        vc.badBehavior()
+        XCTAssert(!vc.everythingIsAwesome)
+    }
 }
