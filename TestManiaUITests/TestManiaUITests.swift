@@ -28,9 +28,54 @@ class TestManiaUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDisplayOfGoodBehavior() {
+        XCTAssert(XCUIApplication().staticTexts["OK"].exists)
+        
+        var behaveButton = XCUIApplication().buttons["Behave"]
+        for _ in 0...5 {
+            behaveButton = XCUIApplication().buttons["Behave"]
+            if behaveButton.exists {
+                break
+            }
+            sleep(1)
+        }
+        XCTAssert(behaveButton.exists)
+        
+        var coolLabel = XCUIApplication().staticTexts["COOL"]
+        for _ in 0...5 {
+            coolLabel = XCUIApplication().staticTexts["COOL"]
+            if coolLabel.exists {
+                break
+            }
+            behaveButton.tap()
+            sleep(1)
+        }
+        XCTAssert(coolLabel.exists)
+    }
+    
+    func testDisplayOfBadBehavior() {
+        XCTAssert(XCUIApplication().staticTexts["OK"].exists)
+        
+        var behaveButton = XCUIApplication().buttons["Misbehave"]
+        for _ in 0...5 {
+            behaveButton = XCUIApplication().buttons["Misbehave"]
+            if behaveButton.exists {
+                break
+            }
+            sleep(1)
+        }
+        XCTAssert(behaveButton.exists)
+        
+        var coolLabel = XCUIApplication().staticTexts["YIKES!"]
+        for _ in 0...5 {
+            coolLabel = XCUIApplication().staticTexts["YIKES!"]
+            if coolLabel.exists {
+                break
+            }
+            behaveButton.tap()
+            sleep(1)
+        }
+        XCTAssert(coolLabel.exists)
     }
     
 }

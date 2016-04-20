@@ -21,16 +21,15 @@ class TestManiaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGoodBehavior() {
+        let vc = ViewController()
+        vc.goodBehavior()
+        XCTAssert(vc.everythingIsAwesome)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testBadBehavior() {
+        let vc = ViewController()
+        vc.badBehavior()
+        XCTAssert(!vc.everythingIsAwesome)
     }
-    
 }
