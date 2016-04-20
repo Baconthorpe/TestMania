@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBAction func behaveTapped(sender: AnyObject) {
+        goodBehavior()
         statusLabel.text = "COOL"
         statusLabel.backgroundColor = UIColor.blueColor()
-        goodBehavior()
     }
     @IBAction func misbehaveTapped(sender: AnyObject) {
+        badBehavior()
         statusLabel.text = "YIKES!"
         statusLabel.backgroundColor = UIColor.redColor()
-        badBehavior()
     }
     
     // MARK: Status
