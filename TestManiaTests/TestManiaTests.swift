@@ -32,4 +32,8 @@ class TestManiaTests: XCTestCase {
         vc.badBehavior()
         XCTAssert(!vc.everythingIsAwesome)
     }
+    
+    func testTrueIsFalse() {
+        XCTAssert(false)
+    }
 }
