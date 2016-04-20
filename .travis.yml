@@ -1,4 +1,6 @@
 language: swift
 
-xcode_project: TestMania.xcodeproj
-xcode_scheme: TestMania
+osx_image: xcode7.3
+
+script:
+  - xcodebuild test -project TestMania.xcodeproj -scheme TestMania -sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO
