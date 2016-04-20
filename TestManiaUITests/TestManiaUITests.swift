@@ -78,4 +78,8 @@ class TestManiaUITests: XCTestCase {
         XCTAssert(coolLabel.exists)
     }
     
+    func testSimple {
+        XCTAssert(true)
+    }
+    
 }
